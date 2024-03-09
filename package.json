@@ -9,10 +9,10 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-i18n": "4.17.1",
     "@strapi/plugin-users-permissions": "4.17.1",
+    "@strapi/provider-email-sendgrid": "^4.20.4",
     "@strapi/provider-upload-cloudinary": "4.17.1",
     "@strapi/strapi": "4.17.1",
     "pg": "8.11.3"

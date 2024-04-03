@@ -11,7 +11,7 @@ module.exports = {
     try {
       console.log('ctx.request.body', ctx.request.body);
       await strapi.plugins['email'].services.email.send({
-        to: `mednajib.slassi@gmail.com`,
+        to: 'portageks@gmail.com',
         from: 'mednajib.slassi@gmail.com',
         cc,
         bcc,

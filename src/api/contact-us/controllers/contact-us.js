@@ -9,7 +9,6 @@ module.exports = {
     const { to, from, cc, bcc, replyTo, subject, text, html } = ctx.request.body;
   
     try {
-      console.log('ctx.request.body', ctx.request.body);
       await strapi.plugins['email'].services.email.send({
         to: 'portageks@gmail.com',
         from: 'mednajib.slassi@gmail.com',
@@ -20,12 +19,10 @@ module.exports = {
         text,
         html,
       });
-      console.log('after plugin call');
       ctx.send({
         message: 'Email sent successfully',
       });
     } catch (err) {
-      console.log('err', err.response.body.errors);
       ctx.throw(400, 'Failed to send email');
     }
   },

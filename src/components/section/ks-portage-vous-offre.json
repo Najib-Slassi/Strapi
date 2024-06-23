@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_section_ks_portage_vous_offres",
+  "info": {
+    "displayName": "KS portage vous offre",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "offres": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::offre.offre"
+    },
+    "buttonTel": {
+      "type": "string"
+    },
+    "buttonSimulation": {
+      "type": "string"
+    }
+  }
+}

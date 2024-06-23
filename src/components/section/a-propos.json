@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_section_a_propos",
+  "info": {
+    "displayName": "À propos",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "titleColoredWord": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section1": {
+      "displayName": "À propos",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.a-propos"
+    },
+    "section2": {
+      "displayName": "Avantages",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.avantages"
+    },
+    "offre": {
+      "displayName": "KS portage vous offre",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.ks-portage-vous-offre"
+    },
+    "makeEstimation": {
+      "displayName": "Réalisez une estimation",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.realisez-une-estimation"
+    }
+  }
+}

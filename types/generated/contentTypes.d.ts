@@ -768,6 +768,95 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAvantageAvantage extends Schema.CollectionType {
+  collectionName: 'avantages';
+  info: {
+    singularName: 'avantage';
+    pluralName: 'avantages';
+    displayName: 'avantage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::avantage.avantage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::avantage.avantage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomeHome extends Schema.SingleType {
+  collectionName: 'homes';
+  info: {
+    singularName: 'home';
+    pluralName: 'homes';
+    displayName: 'home';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    section1: Attribute.Component<'section.a-propos'>;
+    section2: Attribute.Component<'section.avantages'>;
+    offre: Attribute.Component<'section.ks-portage-vous-offre'>;
+    makeEstimation: Attribute.Component<'section.realisez-une-estimation'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiOffreOffre extends Schema.CollectionType {
+  collectionName: 'offres';
+  info: {
+    singularName: 'offre';
+    pluralName: 'offres';
+    displayName: 'offre';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    text: Attribute.String;
+    img: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::offre.offre',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::offre.offre',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -786,6 +875,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::avantage.avantage': ApiAvantageAvantage;
+      'api::home.home': ApiHomeHome;
+      'api::offre.offre': ApiOffreOffre;
     }
   }
 }

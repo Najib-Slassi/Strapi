@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_section_avantages",
+  "info": {
+    "displayName": "Avantages",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "avantages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::avantage.avantage"
+    }
+  }
+}

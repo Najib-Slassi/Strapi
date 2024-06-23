@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_section_realisez_une_estimations",
+  "info": {
+    "displayName": "Réalisez une estimation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

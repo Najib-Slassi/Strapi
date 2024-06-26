@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_section_nos_partenaires",
+  "info": {
+    "displayName": "Nos partenaires"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -814,8 +814,12 @@ export interface ApiHomeHome extends Schema.SingleType {
   attributes: {
     section1: Attribute.Component<'section.a-propos'>;
     section2: Attribute.Component<'section.avantages'>;
-    offre: Attribute.Component<'section.ks-portage-vous-offre'>;
-    makeEstimation: Attribute.Component<'section.realisez-une-estimation'>;
+    section3: Attribute.Component<'section.ks-portage-vous-offre'>;
+    section4: Attribute.Component<'section.realisez-une-estimation'>;
+    section5: Attribute.Component<'section.tarifs'>;
+    section7: Attribute.Component<'section.nos-partenaires'>;
+    section8: Attribute.Component<'section.pilotage'>;
+    section9: Attribute.Component<'section.kpis'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -857,6 +861,39 @@ export interface ApiOffreOffre extends Schema.CollectionType {
   };
 }
 
+export interface ApiTarifTarif extends Schema.CollectionType {
+  collectionName: 'tarifs';
+  info: {
+    singularName: 'tarif';
+    pluralName: 'tarifs';
+    displayName: 'tarif';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    offerName: Attribute.String;
+    taux: Attribute.String;
+    button: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tarif.tarif',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tarif.tarif',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -878,6 +915,7 @@ declare module '@strapi/types' {
       'api::avantage.avantage': ApiAvantageAvantage;
       'api::home.home': ApiHomeHome;
       'api::offre.offre': ApiOffreOffre;
+      'api::tarif.tarif': ApiTarifTarif;
     }
   }
 }

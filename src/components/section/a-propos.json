@@ -17,6 +17,9 @@
     },
     "button": {
       "type": "string"
+    },
+    "title2": {
+      "type": "string"
     }
   }
 }

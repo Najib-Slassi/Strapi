@@ -11,6 +11,7 @@ export interface SectionAPropos extends Schema.Component {
     titleColoredWord: Attribute.String;
     description: Attribute.Text;
     button: Attribute.String;
+    title2: Attribute.String;
   };
 }
 
@@ -27,6 +28,22 @@ export interface SectionAvantages extends Schema.Component {
       'oneToMany',
       'api::avantage.avantage'
     >;
+  };
+}
+
+export interface SectionKpis extends Schema.Component {
+  collectionName: 'components_section_kpis';
+  info: {
+    displayName: 'Kpis';
+  };
+  attributes: {
+    title: Attribute.String;
+    numberExistance: Attribute.Integer;
+    textExistance: Attribute.String;
+    numberCash: Attribute.BigInteger;
+    textCash: Attribute.String;
+    numberEmployees: Attribute.Integer;
+    textEmployees: Attribute.String;
   };
 }
 
@@ -48,6 +65,27 @@ export interface SectionKsPortageVousOffre extends Schema.Component {
   };
 }
 
+export interface SectionNosPartenaires extends Schema.Component {
+  collectionName: 'components_section_nos_partenaires';
+  info: {
+    displayName: 'Nos partenaires';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
+export interface SectionPilotage extends Schema.Component {
+  collectionName: 'components_section_pilotages';
+  info: {
+    displayName: 'Pilotage';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface SectionRealisezUneEstimation extends Schema.Component {
   collectionName: 'components_section_realisez_une_estimations';
   info: {
@@ -59,13 +97,34 @@ export interface SectionRealisezUneEstimation extends Schema.Component {
   };
 }
 
+export interface SectionTarifs extends Schema.Component {
+  collectionName: 'components_section_tarifs';
+  info: {
+    displayName: 'Tarifs';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    tarifs: Attribute.Relation<
+      'section.tarifs',
+      'oneToMany',
+      'api::tarif.tarif'
+    >;
+    features: Attribute.JSON;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'section.a-propos': SectionAPropos;
       'section.avantages': SectionAvantages;
+      'section.kpis': SectionKpis;
       'section.ks-portage-vous-offre': SectionKsPortageVousOffre;
+      'section.nos-partenaires': SectionNosPartenaires;
+      'section.pilotage': SectionPilotage;
       'section.realisez-une-estimation': SectionRealisezUneEstimation;
+      'section.tarifs': SectionTarifs;
     }
   }
 }

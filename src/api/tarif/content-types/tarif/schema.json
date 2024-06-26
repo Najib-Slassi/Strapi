@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tarifs",
+  "info": {
+    "singularName": "tarif",
+    "pluralName": "tarifs",
+    "displayName": "tarif",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "offerName": {
+      "type": "string"
+    },
+    "taux": {
+      "type": "string"
+    },
+    "button": {
+      "type": "string"
+    }
+  }
+}

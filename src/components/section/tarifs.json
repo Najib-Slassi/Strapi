@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section_tarifs",
+  "info": {
+    "displayName": "Tarifs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tarifs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tarif.tarif"
+    },
+    "features": {
+      "type": "json"
+    }
+  }
+}

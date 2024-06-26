@@ -24,17 +24,41 @@
       "repeatable": false,
       "component": "section.avantages"
     },
-    "offre": {
+    "section3": {
       "displayName": "KS portage vous offre",
       "type": "component",
       "repeatable": false,
       "component": "section.ks-portage-vous-offre"
     },
-    "makeEstimation": {
+    "section4": {
       "displayName": "Réalisez une estimation",
       "type": "component",
       "repeatable": false,
       "component": "section.realisez-une-estimation"
+    },
+    "section5": {
+      "displayName": "Tarifs",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.tarifs"
+    },
+    "section7": {
+      "displayName": "Nos partenaires",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.nos-partenaires"
+    },
+    "section8": {
+      "displayName": "Pilotage",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.pilotage"
+    },
+    "section9": {
+      "displayName": "Kpis",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.kpis"
     }
   }
 }
